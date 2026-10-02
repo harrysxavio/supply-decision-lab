@@ -1,0 +1,8 @@
+# Local Pi runtime state
+.atl/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.ruff_cache/
