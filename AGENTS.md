@@ -60,8 +60,13 @@ el archivo está mal armado.
   la biblioteca estándar y después los paquetes instalados; `ruff` lo marca como error `I001`.
   La explicación de cada import va en un bloque justo debajo.
 - **Proporción a favor del lector.** Es correcto y esperable que los comentarios ocupen más líneas
-  que el código en un archivo didáctico (en la Fase 0: ~90 líneas de código, ~280 de archivo). Lo
-  que **no** puede cambiar es el código ejecutable.
+  que el código en un archivo didáctico (en la Fase 0: ~90 líneas de código, ~280 de archivo; en la
+  Fase 1, ~130 de código, ~350 de archivo). Lo que **no** puede cambiar es el código ejecutable.
+- **Se explica el código, no solo el proceso.** El comentario tiene que servirle a alguien que sabe
+  poco de Python: qué es un diccionario y cómo se lee con corchetes, qué hace `raise`, por qué hay un
+  `max(0.0, ...)`, qué son las anotaciones de tipo (`: float`, `-> str`), qué significa
+  `if __name__ == "__main__":`, cómo se arma un formato de columna (`{x:>8}`). Explicar el flujo de
+  la fase sin explicar la sintaxis deja al lector afuera: el proceso se entiende y el archivo no.
 - **Sin adornos.** Nada de emojis, ni `TODO`, ni "esto imprime el resultado" cuando es evidente.
 
 ### La verificación de que solo se agregaron comentarios
