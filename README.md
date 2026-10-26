@@ -9,12 +9,14 @@ construir una arquitectura completa de una sola vez.
 
 | Fase | Qué prueba | Estado |
 | --- | --- | --- |
-| [`phase_00_laya_hello`](phases/phase_00_laya_hello/README.md) | Que Laya puede leer un estado de supply en español y devolver respuestas tipadas con probabilidades, sin generar texto | corrida ejecutada · cierre parcial |
+| [`phase_00_laya_hello`](phases/phase_00_laya_hello/README.md) | Que Laya puede leer un estado de supply en español y devolver respuestas tipadas con probabilidades, sin generar texto | completada |
+| [`phase_01_enriched_state`](phases/phase_01_enriched_state/README.md) | Si darle al modelo las cuentas ya hechas cambia su juicio sobre el riesgo de parada | completada · hipótesis no confirmada |
 
 Cada fase vive en su propia carpeta bajo `phases/` y contiene cuatro archivos: el script, su
 `README.md` (objetivo, hipótesis, entrada, salida esperada y límites), `learnings.md` (qué se probó,
 qué ocurrió y qué justificaría avanzar) y `lesson.md` (la misma fase explicada en lenguaje sencillo,
-para quien recién empieza).
+para quien recién empieza). Una fase puede sumar un quinto archivo cuando tiene código determinístico
+que se puede testear, y entonces lo justifica por escrito en su `README.md`.
 
 ## Convenciones
 
