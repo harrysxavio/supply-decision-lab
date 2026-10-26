@@ -90,8 +90,13 @@ está decidido, no que esté en lo correcto.
 
 - Tamaño y tiempo reales de la descarga del checkpoint, y latencia de la respuesta en CPU: no se
   midieron.
-- Si una segunda corrida inmediata reproduce los mismos valores, es decir, si el resultado depende
-  de la red o de la caché fría.
+
+### Cerrado después
+
+- **Estabilidad: verificada.** Una segunda corrida del mismo script reprodujo los mismos valores:
+  `area = logistica` (0.908), `severidad = 1.7808` con probabilidades `0.0094 / 0.2004 / 0.7902`, y
+  `riesgo_parada = 0.0044` con `answer_confidence = 0.9956`. El resultado no depende de la red ni de
+  la caché fría.
 
 ## Qué funcionó
 
@@ -164,7 +169,7 @@ Avanzar tiene sentido cuando se cumplan **todas** estas condiciones:
    → **Cumplido**: 129 tokens de estado, sin recorte.
 5. La primera corrida y una segunda corrida inmediata dan resultados equivalentes, es decir, el
    resultado no depende de condiciones externas (red, caché fría).
-   → **Pendiente**: no se intentó una segunda corrida.
+   → **Cumplido**: la segunda corrida reprodujo los tres valores sin diferencias.
 6. Está claro qué se agrega en la Fase 1 (el siguiente incremento de dominio) y ese incremento no
    necesita tocar nada de esta fase.
    → **Pendiente**: todavía no está definido.
